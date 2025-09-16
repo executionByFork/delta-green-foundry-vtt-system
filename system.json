@@ -1,7 +1,7 @@
 {
   "id": "deltagreen",
-  "title": "Delta Green: The Role-Playing Game",
-  "description": "Fan-made Foundry VTT system for Delta Green: The Role-Playing Game. Based on the rules in the Agent's Handbook (https://www.drivethrurpg.com/product/181674/Delta-Green-Agents-Handbook) [*NOT* Call of Cthulu]. Made with the permission of but neither affiliated with nor endorsed by Arc Dream Publishing or the Delta Green Partnership.",
+  "title": "Delta Green: BtV Edition",
+  "description": "Delta Green, with a little homebrew",
   "url": "https://github.com/TheLastScrub/delta-green-foundry-vtt-system",
   "license": "LICENSE.txt",
   "background": "systems/deltagreen/assets/img/burned_delta_green_logo_on_form_splash_page.webp",
@@ -15,7 +15,7 @@
       "discord": "jalensailin"
     }
   ],
-  "version": "1.3.5",
+  "version": "1.4.13_btv",
   "compatibility": {
     "minimum": "12",
     "verified": "12",

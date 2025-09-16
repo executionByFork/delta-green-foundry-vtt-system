@@ -261,6 +261,38 @@ export default class DeltaGreenActor extends Actor {
       system.sanity.breakingPointHit = false;
     }
 
+    if (
+      adaptations.isolation.incident1 &&
+      adaptations.isolation.incident2 &&
+      adaptations.isolation.incident3
+    ) {
+      system.sanity.adaptations.isolation.isAdapted = true;
+    } else {
+      system.sanity.adaptations.isolation.isAdapted = false;
+    }
+
+    if (system.sanity.value <= system.sanity.currentBreakingPoint) {
+      system.sanity.breakingPointHit = true;
+    } else {
+      system.sanity.breakingPointHit = false;
+    }
+
+    if (
+      adaptations.selfidentity.incident1 &&
+      adaptations.selfidentity.incident2 &&
+      adaptations.selfidentity.incident3
+    ) {
+      system.sanity.adaptations.selfidentity.isAdapted = true;
+    } else {
+      system.sanity.adaptations.selfidentity.isAdapted = false;
+    }
+
+    if (system.sanity.value <= system.sanity.currentBreakingPoint) {
+      system.sanity.breakingPointHit = true;
+    } else {
+      system.sanity.breakingPointHit = false;
+    }
+
     // calculate total armor rating
     let protection = 0;
     for (const i of agent.items) {

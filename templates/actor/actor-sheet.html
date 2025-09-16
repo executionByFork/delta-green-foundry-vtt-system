@@ -225,6 +225,32 @@
                     {{localize 'DG.Mental.AdaptedToHelplessness'}}
                   {{/if}}
                   </label>
+
+                  <label>{{localize 'DG.Mental.Isolation'}}</label>
+                  <input class="labeled-resource-checkbox" type="checkbox" name="system.sanity.adaptations.isolation.incident1" {{checked actor.system.sanity.adaptations.isolation.incident1}} data-dtype="Boolean" />
+                  <input class="labeled-resource-checkbox" type="checkbox" name="system.sanity.adaptations.isolation.incident2" {{checked actor.system.sanity.adaptations.isolation.incident2}} data-dtype="Boolean" />
+                  <input class="labeled-resource-checkbox" type="checkbox" name="system.sanity.adaptations.isolation.incident3" {{checked actor.system.sanity.adaptations.isolation.incident3}} data-dtype="Boolean" />
+                  
+                  <label class="adapted-label"
+                    title="{{localize 'DG.Tooltip.AdaptedToIsolation'}}"
+                  >
+                  {{#if actor.system.sanity.adaptations.isolation.isAdapted}}
+                    {{localize 'DG.Mental.AdaptedToIsolation'}}
+                  {{/if}}
+                  </label>
+
+                  <label>{{localize 'DG.Mental.SelfIdentity'}}</label>
+                  <input class="labeled-resource-checkbox" type="checkbox" name="system.sanity.adaptations.selfidentity.incident1" {{checked actor.system.sanity.adaptations.selfidentity.incident1}} data-dtype="Boolean" />
+                  <input class="labeled-resource-checkbox" type="checkbox" name="system.sanity.adaptations.selfidentity.incident2" {{checked actor.system.sanity.adaptations.selfidentity.incident2}} data-dtype="Boolean" />
+                  <input class="labeled-resource-checkbox" type="checkbox" name="system.sanity.adaptations.selfidentity.incident3" {{checked actor.system.sanity.adaptations.selfidentity.incident3}} data-dtype="Boolean" />
+                  
+                  <label class="adapted-label"
+                    title="{{localize 'DG.Tooltip.AdaptedToSelfIdentity'}}"
+                  >
+                  {{#if actor.system.sanity.adaptations.selfidentity.isAdapted}}
+                    {{localize 'DG.Mental.AdaptedToSelfIdentity'}}
+                  {{/if}}
+                  </label>
                   
                 </div>
               </div>
