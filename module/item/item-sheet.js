@@ -145,7 +145,7 @@ export default class DeltaGreenItemSheet extends ItemSheet {
       case "sanity-damage-learned": {
         let combinedFormula;
 
-        const { successLoss, failedLoss } = this.item.system.learnedsanity;
+        const { successLoss, failedLoss } = this.item.system.learnedSanity;
         combinedFormula = `{${successLoss}, ${failedLoss}}`;
 
         roll = new DGSanityDamageRoll(combinedFormula, {}, rollOptions);
