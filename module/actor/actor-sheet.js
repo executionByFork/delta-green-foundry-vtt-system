@@ -1270,7 +1270,14 @@ export default class DeltaGreenActorSheet extends ActorSheet {
       default:
         break;
     }
-    this.processRoll(event, roll, rollOptions);
+    await this.processRoll(event, roll, rollOptions);
+    if (dataset.rolltype == "skill" && roll.isSuccess == false) {
+        if (this.actor.system.skills?.[dataset.key]) {
+            await this.actor.update({ [`system.skills.${dataset.key}.failure`]: true });
+        } else if (this.actor.system.typedSkills?.[dataset.key]) {
+            await this.actor.update({ [`system.typedSkills.${dataset.key}.failure`]: true });
+        }
+    }
   }
 
   /**
