@@ -158,6 +158,7 @@ export default class DeltaGreenActor extends Actor {
     const { system } = agent;
 
     // Make modifications to data here. For example:
+    system.hunchRolls = system.hunchRolls ?? ["","",""];
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (const [key, statistic] of Object.entries(system.statistics)) {
@@ -173,7 +174,7 @@ export default class DeltaGreenActor extends Actor {
       proficiency: 99 - system.sanity.value,
       cannotBeImprovedByFailure: true,
       failure: false,
-    };    
+    };
 
     if (system.skills.ritual.proficiency > 99) {
       system.skills.ritual.proficiency = 99;
