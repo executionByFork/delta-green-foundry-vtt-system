@@ -1278,11 +1278,17 @@ export default class DeltaGreenActorSheet extends ActorSheet {
     }
     await this.processRoll(event, roll, rollOptions);
     if (dataset.rolltype == "skill" && roll.isSuccess == false) {
-        if (this.actor.system.skills?.[dataset.key]) {
-            await this.actor.update({ [`system.skills.${dataset.key}.failure`]: true });
-        } else if (this.actor.system.typedSkills?.[dataset.key]) {
-            await this.actor.update({ [`system.typedSkills.${dataset.key}.failure`]: true });
-        }
+      if (this.actor.system.skills?.[dataset.key]) {
+        await this.actor.update({ [`system.skills.${dataset.key}.failure`]: true });
+      } else if (this.actor.system.typedSkills?.[dataset.key]) {
+        await this.actor.update({ [`system.typedSkills.${dataset.key}.failure`]: true });
+      }
+    }
+    if (dataset.rolltype == "weapon" && roll.isSuccess == false) {
+      const weaponSkill = item.system.skill
+      if (this.actor.system.skills?.[weaponSkill]) {
+        await this.actor.update({ [`system.skills.${weaponSkill}.failure`]: true })
+      }
     }
   }
 
