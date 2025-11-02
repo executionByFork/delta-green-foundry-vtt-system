@@ -421,6 +421,8 @@ export default class DeltaGreenActorSheet extends ActorSheet {
 
   // Can add extra buttons to form header here if necessary
   _getHeaderButtons() {
+    return super._getHeaderButtons();
+/*
     let buttons = super._getHeaderButtons();
     let label = "Roll Luck";
     let label2 = "Luck";
@@ -444,6 +446,7 @@ export default class DeltaGreenActorSheet extends ActorSheet {
     ].concat(buttons);
 
     return buttons;
+*/
   }
 
   // This only exists to give a chance to activate the modifier dialogue if desired
@@ -507,6 +510,9 @@ export default class DeltaGreenActorSheet extends ActorSheet {
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
+
+    // Add Luck Button
+    html.find(".luck-roll-button").click((ev) => this.luckRollOnClick(ev))
 
     // Add Inventory Item
     html.find(".item-create").click(this._onItemCreate.bind(this));

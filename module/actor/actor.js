@@ -86,7 +86,7 @@ export default class DeltaGreenActor extends Actor {
       proficiency: 99 - system.sanity.value,
       cannotBeImprovedByFailure: true,
       failure: false,
-    };    
+    };
 
     if (system.skills.ritual.proficiency > 99) {
       system.skills.ritual.proficiency = 99;
