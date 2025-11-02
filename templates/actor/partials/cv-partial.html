@@ -46,7 +46,7 @@
 {{/if}}
 
 
-
+{{#unless actor.limited}}
 {{!-- <div style="padding: 2px; margin-bottom: 5px;"> --}}
 <div class="horizontal-bar-section-divider">
   <span class="">{{localize "DG.Sheet.BlockHeaders.PhysicalDescriptionNotes"}}</span>  
@@ -55,3 +55,4 @@
 <div class="editor-host">
     {{editor enrichedDescription target="system.physicalDescription" button=true owner=owner editable=editable}}
 </div>
+{{/unless}}
